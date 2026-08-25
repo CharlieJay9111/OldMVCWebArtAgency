@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    margin-top: 95px;
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bg {
+    background-color: #fff;
+}
+
+main a > img {
+    filter: saturate( 0% );
+    transition: filter 0.25s ease-in;
+}
+
+main a:hover > img, main a:active > img, main a:target > img, main a > img:hover {
+    filter: saturate( 100% )
+}
+
+.box-link {
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+.box-link h2 , .artist h2 {
+    color: #000;
+    margin: 10px 0 0;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+p a {
+    color: #555;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 15%;
+    margin: 10px 0;
+    border: none;
+    border-top: 6px solid #666;
+}
+
+.pagination {
+    text-align: center;
+    padding: 10px 0 30px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin: 5px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+.pagination .active , .pagination a:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    background-color: #fff;
+    color: #555;
+    font-weight: 400;
+    line-height: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    z-index: 999;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+.navigation a {
+    padding: 15px;
+}
+
+.navigation a:hover , .navigation .active {
+    color: #000;
+}
+
+nav .logo {
+    padding: 15px 0;
+}
+
+nav .icon {
+    display: none;
+    cursor: pointer;
+}
+
+nav .icon svg {
+    height: 30px;
+    width: 30px;
+}
+
+.admin-link {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 15px);
+    height: 30px;
+}
+
+a svg {
+    display: block;
+    height: 100%;
+}
+
+@media screen and (max-width: 1350px) 
+{
+    .admin-link {
+        right: -15px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+
+    nav .icon {
+        display: flex;
+    }
+
+    .navigation {
+        display: block;
+        position: absolute;
+        transition: all .3s ease-in-out;
+        top: 105px;
+        right: -200px;
+        width: 200px;
+        background-color: #fff;
+        z-index: 999;
+        box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+    }
+
+    .navigation a {
+        padding: 10px;
+    }
+
+    nav .active {
+        
+        height: auto;
+        right: 0;
+    }
+
+    .navigation > * {
+        display: block;
+    }
+
+    .admin-link {
+        right: 60px;
+    }
+}
+
+
+/* Main */
+main {
+    min-height: calc(100Vh - (110px + 88px));
+    background-image: url("../img/bg.webp");
+    display: block;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+#e-404 {
+    min-height: calc(100Vh - (110px + 88px));
+}
+
+/* Index */
+#hero {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#hero > div {
+    min-height: calc(100Vh - (95px));
+}
+
+
+h1 {
+    padding: 50px 0;
+    font-size: 55px;
+    color: #fff;
+    font-weight: 800;
+    word-wrap: break-word;
+}
+
+.bg h1 {
+    color: #54595F;
+}
+
+.color {
+    color: #acacac;
+}
+
+.border {
+    border: 2px solid #fff;
+}
+
+main .icon img {
+    filter:  brightness(50%);
+}
+
+main .icon:hover {
+    filter: brightness(100%)
+}
+
+.box-link svg {
+    height: 40%;
+    fill: #999;
+    transition: fill 0.25s ease-in;
+    
+}
+
+.box-link:hover svg {
+    fill: #fff;
+}
+
+.text-t {
+    text-transform: lowercase;
+}
+
+.text-t::first-letter {
+    text-transform: uppercase;
+}
+
+/* Zastupujeme */
+
+#hledani input {
+    font-size: 20px;
+}
+
+#hledani button {
+    padding-inline: 10px;
+}
+
+.artist {
+    margin: 20px;
+    display: block;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+
+
+.artist img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Umelec */
+#umelec {
+    padding: 50px 0;
+}
+
+#umelec h1 {
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: left;
+}
+
+/* film */
+#film {
+    padding: 50px 0;
+}
+
+.shadow {
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+#film h1 {
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: left;
+}
+
+/* nabizime && zajistime*/
+
+#nabizime img , #zajistime img , .item img {
+    max-width: 520px;
+    min-width: 520px;
+    object-fit: cover;
+}
+
+/* kontakt */
+
+#kontakt {
+    padding-bottom: 50px;
+}
+
+#kontakt h1 {
+    color: #acacac;
+}
+
+#kontakt .color {
+    color: #fff;
+}
+
+#kontakt > .container {
+    max-width: 700px;
+}
+
+form {
+    font-size: 18px;
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+form > div {
+    padding-bottom: 20px;
+}
+
+form > div:last-child {
+    padding-bottom: 10px;
+}
+
+form > div > * {
+    display: block;
+    width: 100%;
+    color: #555;
+}
+
+form label > span {
+    color: #000;
+    font-weight: 700;
+}
+
+form input {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+form textarea {
+    margin-top: 5px;
+    min-height: 101px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 5px 20px;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #666;
+    color: #fff;
+    font-weight: 600;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+#info iframe {
+    width: 100%;
+}
+
+#info .container {
+    padding-bottom: 30px;
+}
+
+/* hledani */
+#hledani .container {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+#hledani form {
+    background: none;
+    box-shadow: none;
+}
+
+#hledani form > div:last-child {
+    padding: 0;
+}
+
+#hledani input {
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+#hledani button {
+    width: 60px;
+    margin-left: 20px;
+    fill: #fff;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+/* admin */
+
+#admin {
+    padding-bottom: 50px;
+}
+
+.login {
+    max-width: 400px;
+    margin: auto;
+}
+
+.login > * {
+    width: 100%;
+}
+
+#login > .container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+#login form {
+    padding: 20px;
+}
+
+#admin-prihlaseni h1, 
+#admin h1,
+#admin h2, 
+#admin a {
+    color: #fff;
+}
+
+#admin a {
+    padding: 5px;
+}
+
+#admin a:hover {
+    text-decoration: underline;
+}
+
+table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+}
+
+#admin table img {
+    height: 20px;
+}
+
+#admin th:last-child {
+    width: 130px;
+}
+
+th, td{
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+#admin form > * {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#admin form input {
+    width: 100%;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.remove-link
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.error {
+    text-align: center;
+    color: #f00;
+}
+
+#admin-reference .p-0 
+{
+    padding: 0;
+}
+
+#admin-reference label , .item label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.item .max {
+    max-width: 520px;
+    min-width: 520px;
+}
+
+.item > div:last-child {
+    padding: 0;
+}
+
+.delete > *:last-child {
+    margin: 0 !important;
+}
+
+.item input[type=text] {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.item button {
+    position: absolute;
+    right: -55px;
+    bottom: 0;
+}
+
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+    border-color: #666;
+    border-style: solid;
+    outline: 0;
+}
+
+/* editor */
+#editor *[name]{
+    display: block;
+    width: 100%;
+}
+
+#editor > p:focus-visible {
+    outline: 0;
+}
+
+#editor-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -55px;
+    top: 0;
+}
+
+#editor-nav > span, .item button 
+{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #666;
+    fill: #ccc;
+}
+
+#editor-nav > span:first-child {
+    margin-top: 0;
+}
+
+#editor-nav > span:hover, #editor-nav .active, .item button:hover
+{
+    background-color: #555;
+    user-select: none;
+    fill: #fff;
+}
+
+#editor-nav svg 
+{
+    width: auto;
+    height: 100%;
+}
+
+[contenteditable=true]:empty:not(:focus):before{
+    content:attr(data-ph);
+    color:grey;
+    font-style:italic;
+  }
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,.42),0 1px 10px 0 rgba(0,0,0,.12),0 4px 5px -2px rgba(0,0,0,.1);
+}
+
+@media screen and (max-width: 1020px) {
+
+    .row {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .w-33 , .w-25{
+        width: 50%;
+    }
+
+    #nabizime img, #zajistime img {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    #nabizime .flex, #zajistime .flex {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #umelec .w-33 {
+        width: 100%;
+    }
+
+    #umelec .px-50 {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+
+    .w-33, .w-25 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #zastupujeme .w-33 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    #hero {
+        font-size: 14px;
+    }
+
+    #zastupujeme .w-33 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .pagination a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .box-link h2 , .artist h2 {
+        font-size: 1.65em;
+    }
+
+    .pagination a {
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+}
+
+
+#admin-info img {
+    border: 1px solid;
+}
